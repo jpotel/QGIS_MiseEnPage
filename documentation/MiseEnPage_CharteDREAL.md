@@ -23,6 +23,37 @@ Un seul fichier de mise en page QGIS (.qpt) permet de réaliser l'ensemble des f
 
 Le bloc-marque au format svg est stocké sur un serveur web internet.
 
+Une fonction personnalisée QGIS qui renvoie la hauteur ou la largeur d'un élément de la mise en page a été développé :
+
+```python
+from qgis.core import *
+from qgis.gui import *
+
+@qgsfunction(args='auto', group='Custom')
+def dimension_objet_mise_en_page(value1, value2, value3, feature, parent):
+    """
+    Donne la hauteur ou la largeur d'un objet d'une mise en page.
+    <h2>Example usage:</h2>
+    <ul>
+      <li>dimension_objet_mise_en_page('mise_en_page','objet','hauteur') -> 13</li>
+      <li>dimension_objet_mise_en_page('mise_en_page','objet','largeur') -> 12</li>
+    </ul>
+    """
+    manager = QgsProject.instance().layoutManager()
+    layout = manager.layoutByName(value1)
+    mapItem = layout.itemById(value2)
+    if value3 == "hauteur":
+       return mapItem.rectWithFrame().height()
+    elif value3 == "largeur":
+        return mapItem.rectWithFrame().width()
+    else:
+        return "erreur"
+```
+
+Elle permet l'automatisation du placement d'élément les un par rapport au autre notamment lors de la modification du blocs `sources`.
+
+Cette fonction doit être intégré à QGIS avant l'utilisation du modèle.
+
 ## Les éléments paramétrables
 
 ### Le format de la page

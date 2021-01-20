@@ -416,7 +416,7 @@ pre code, pre tt {
                 </head>
                 <body style="">
                 <h1 id="0">Mise en page à la charte graphique DREAL</h1>
-<p id="2"><img src="file:///d:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image4.jpg" alt="image exemple charte" /></p>
+<p id="2"><img src="file:///D:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image4.jpg" alt="image exemple charte" /></p>
 <h2 id="4">Contexte</h2>
 <p id="6">Cette charte n'est à appliquer que lorsque la carte à produire est un document à part entière.</p>
 <p id="8"><strong>Elle n'a pas à être utilisée pour une carte qui est destinée à être intégrée dans un document possédant déjà sa propre charte graphique.</strong></p>
@@ -426,37 +426,62 @@ pre code, pre tt {
 <p id="16">Le principe général est de suivre au plus pret les règles définies dans la <a href="https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/introduction">charte gouvernementale</a>.
 Cette charte ne fait donc plus de distinction thématique (choix d'une couleur par thème) et se veut plus sobre mettant en avant le contenu de la carte.</p>
 <p id="19">Un seul fichier de mise en page QGIS (.qpt) permet de réaliser l'ensemble des formats A3, A4, A5, paysage, portrait, etc. La mise en forme s'adapte en fonction des critères que le cartographe renseignera.</p>
-<p id="21"><img src="file:///d:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/norm.svg" alt="bloc-marque" /></p>
+<p id="21"><img src="file:///D:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/norm.svg" alt="bloc-marque" /></p>
 <p id="23">Le bloc-marque au format svg est stocké sur un serveur web internet.</p>
-<h2 id="25">Les éléments paramétrables</h2>
-<h3 id="27">Le format de la page</h3>
-<p id="29">Le format de la page se paramètre via les &quot;propriétés de la page&quot; accessible par un clic droit sur la page.</p>
-<p id="31">Là, l'opérateur peut choisir la taille de sortie de la page (A4, A3, A5,...) et son orientation. La mise en page s'adaptera automatiquement aux choix qui sont faits.</p>
-<h3 id="33">La hauteur de la mariane</h3>
-<p id="35">Les documents produits selon la charte gouvernementale suivent des règles de composition basées sur la hauteur de la Marianne du bloc-marque. Par défaut et pour l'utilisation au format A3, A4 et A5, cette hauteur est fixée à <code>2,5 mm</code>. Dans le cadre d'une production particulière cette hauteur peut être modifiée en changeant la valeur de la variable de mise en page <code>@hauteur_marianne</code></p>
-<p id="37"><img src="file:///d:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image1.jpg" alt="hauteur Marianne" /></p>
-<p id="39">La mise en page se mettra à jour automatiquement en fonction de la valeur de cette variable.</p>
-<h3 id="41">Le choix de l'emprise</h3>
-<p id="43">L'emprise de la carte, avec notament les paramètres <code>Échelle</code>, <code>Min X</code>, <code>Max X</code>, <code>Min Y</code> et <code>Max Y</code>, peut être définie automatiquement via la variable de mise en page <code>@emprise_carte</code></p>
-<p id="45"><img src="file:///d:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image2.jpg" alt="emprise de la carte" /></p>
-<p id="47">Cette variable stocke une chaine de caractère dont l'évaluation donne la géometrie de l'objet définissant l'emprise. Ainsi, si l'objectif est de produire une carte sur le département du Calvados et que le projet contient la couche <code>DEPARTEMENT</code> possédant l'attribut <code>insee_dep</code>, l'opérateur pourra renseigner dans cette variable la valeur <code>geometry(get_feature('DEPARTEMENT','insee_dep','14')</code>.</p>
-<p id="49">L'échelle et l'emprise seront alors modifiées automatiquement pour obtenir le résultat souhaité.</p>
-<h3 id="51">Autres éléments paramétrables</h3>
-<p id="53">Deux autres éléments sont paramétrables pour régler la composition de la carte. Il s'agit de la <strong>largeur du cartouche</strong> et de la <strong>dimension des marges internes au cartouche</strong>. Ces paramétrages s'effectuent respectivement dans les variables de mise en page <code>@largeur_cartouche</code> et <code>@marge_cartouche</code></p>
-<p id="55"><img src="file:///d:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image3.jpg" alt="emprise de la carte" /></p>
-<h2 id="57">Les éléments à modifier</h2>
-<h3 id="59">La légende</h3>
-<p id="61">L'opérateur choisira les éléments à intégrer dans la légende.</p>
-<h3 id="63">Le titre</h3>
-<p id="65">Le titre de la carte doit être renseigné manuellement dans le cadre prévu à cet effet. Il doit être simple et explicite comme par exemple <code>Les plans de prévention des risques en Normandie au 1er janvier 2020</code></p>
-<h3 id="67">Les sources</h3>
-<p id="69">La mention des sources est une obligation et doit s'effectuer selon les obligations fixées par le producteur de la donnée représentée.</p>
-<p id="71">exemple :</p>
-<pre><code id="73">- IGN, AdminExpress COG 2020
+<p id="25">Une fonction personnalisée QGIS qui renvoie la hauteur ou la largeur d'un élément de la mise en page a été développé :</p>
+<pre><code id="27" class="language-python">from qgis.core import *
+from qgis.gui import *
+
+@qgsfunction(args='auto', group='Custom')
+def dimension_objet_mise_en_page(value1, value2, value3, feature, parent):
+    &quot;&quot;&quot;
+    Donne la hauteur ou la largeur d'un objet d'une mise en page.
+    &lt;h2&gt;Example usage:&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;dimension_objet_mise_en_page('mise_en_page','objet','hauteur') -&gt; 13&lt;/li&gt;
+      &lt;li&gt;dimension_objet_mise_en_page('mise_en_page','objet','largeur') -&gt; 12&lt;/li&gt;
+    &lt;/ul&gt;
+    &quot;&quot;&quot;
+    manager = QgsProject.instance().layoutManager()
+    layout = manager.layoutByName(value1)
+    mapItem = layout.itemById(value2)
+    if value3 == &quot;hauteur&quot;:
+       return mapItem.rectWithFrame().height()
+    elif value3 == &quot;largeur&quot;:
+        return mapItem.rectWithFrame().width()
+    else:
+        return &quot;erreur&quot;
+</code></pre>
+<p id="52">Elle permet l'automatisation du placement d'élément les un par rapport au autre notamment lors de la modification du blocs <code>sources</code>.</p>
+<h2 id="54">Les éléments paramétrables</h2>
+<h3 id="56">Le format de la page</h3>
+<p id="58">Le format de la page se paramètre via les &quot;propriétés de la page&quot; accessible par un clic droit sur la page.</p>
+<p id="60">Là, l'opérateur peut choisir la taille de sortie de la page (A4, A3, A5,...) et son orientation. La mise en page s'adaptera automatiquement aux choix qui sont faits.</p>
+<h3 id="62">La hauteur de la mariane</h3>
+<p id="64">Les documents produits selon la charte gouvernementale suivent des règles de composition basées sur la hauteur de la Marianne du bloc-marque. Par défaut et pour l'utilisation au format A3, A4 et A5, cette hauteur est fixée à <code>2,5 mm</code>. Dans le cadre d'une production particulière cette hauteur peut être modifiée en changeant la valeur de la variable de mise en page <code>@hauteur_marianne</code></p>
+<p id="66"><img src="file:///D:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image1.jpg" alt="hauteur Marianne" /></p>
+<p id="68">La mise en page se mettra à jour automatiquement en fonction de la valeur de cette variable.</p>
+<h3 id="70">Le choix de l'emprise</h3>
+<p id="72">L'emprise de la carte, avec notament les paramètres <code>Échelle</code>, <code>Min X</code>, <code>Max X</code>, <code>Min Y</code> et <code>Max Y</code>, peut être définie automatiquement via la variable de mise en page <code>@emprise_carte</code></p>
+<p id="74"><img src="file:///D:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image2.jpg" alt="emprise de la carte" /></p>
+<p id="76">Cette variable stocke une chaine de caractère dont l'évaluation donne la géometrie de l'objet définissant l'emprise. Ainsi, si l'objectif est de produire une carte sur le département du Calvados et que le projet contient la couche <code>DEPARTEMENT</code> possédant l'attribut <code>insee_dep</code>, l'opérateur pourra renseigner dans cette variable la valeur <code>geometry(get_feature('DEPARTEMENT','insee_dep','14')</code>.</p>
+<p id="78">L'échelle et l'emprise seront alors modifiées automatiquement pour obtenir le résultat souhaité.</p>
+<h3 id="80">Autres éléments paramétrables</h3>
+<p id="82">Deux autres éléments sont paramétrables pour régler la composition de la carte. Il s'agit de la <strong>largeur du cartouche</strong> et de la <strong>dimension des marges internes au cartouche</strong>. Ces paramétrages s'effectuent respectivement dans les variables de mise en page <code>@largeur_cartouche</code> et <code>@marge_cartouche</code></p>
+<p id="84"><img src="file:///D:/users/jerome.potel/Documents/Developpement/QGIS_MiseEnPage/documentation/img/image3.jpg" alt="emprise de la carte" /></p>
+<h2 id="86">Les éléments à modifier</h2>
+<h3 id="88">La légende</h3>
+<p id="90">L'opérateur choisira les éléments à intégrer dans la légende.</p>
+<h3 id="92">Le titre</h3>
+<p id="94">Le titre de la carte doit être renseigné manuellement dans le cadre prévu à cet effet. Il doit être simple et explicite comme par exemple <code>Les plans de prévention des risques en Normandie au 1er janvier 2020</code></p>
+<h3 id="96">Les sources</h3>
+<p id="98">La mention des sources est une obligation et doit s'effectuer selon les obligations fixées par le producteur de la donnée représentée.</p>
+<p id="100">exemple :</p>
+<pre><code id="102">- IGN, AdminExpress COG 2020
 - DREAL Normandie, ZNS 2020
 </code></pre>
-<h3 id="78">La référence</h3>
-<p id="80">La référence prend le nom du fichier projet QGIS. Avant d'exporter le résultat de la mise en page, il convient donc d'enregistrer le projet QGIS.</p>
+<h3 id="107">La référence</h3>
+<p id="109">La référence prend le nom du fichier projet QGIS. Avant d'exporter le résultat de la mise en page, il convient donc d'enregistrer le projet QGIS.</p>
 
                 </body>
             <html>
