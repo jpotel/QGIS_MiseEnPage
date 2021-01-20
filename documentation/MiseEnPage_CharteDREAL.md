@@ -1,5 +1,7 @@
 # Mise en page à la charte graphique DREAL
 
+![image exemple charte](/img/image4.jpg)
+
 ## Contexte
 
 Cette charte n'est à appliquer que lorsque la carte à produire est un document à part entière.
@@ -67,10 +69,8 @@ La mention des sources est une obligation et doit s'effectuer selon les obligati
 exemple :
 
 ```
-
 - IGN, AdminExpress COG 2020
 - DREAL Normandie, ZNS 2020
-
 ```
 
 ### La référence
