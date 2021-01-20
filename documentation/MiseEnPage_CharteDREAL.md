@@ -1,6 +1,6 @@
 # Mise en page à la charte graphique DREAL
 
-![image exemple charte](/img/image4.jpg)
+![image exemple charte](img/image4.jpg)
 
 ## Contexte
 
@@ -8,11 +8,14 @@ Cette charte n'est à appliquer que lorsque la carte à produire est un document
 
 **Elle n'a pas à être utilisée pour une carte qui est destinée à être intégrée dans un document possédant déjà sa propre charte graphique.**
 
-Ce document explique comment configurer la mise en page dans QGIS pour obtenir le résultat escompté. Il ne traite pas du contenu de la carte (fond à utiliser, sémiologie graphique...) et se limite qu'au cas de production "simple". Le cas des atlas n'est ainsi pas traité.
+Ce document explique comment configurer la mise en page dans QGIS afin d'obtenir le résultat escompté. 
+
+Il ne traite pas du contenu de la carte (fond à utiliser, sémiologie graphique...) et se limite qu'au cas d'une production "simple". Il n'aborde pas le cas des atlas.
 
 ## les fichiers disponibles
 
-Le principe général est de suivre au plus pret les règles définies dans la charte gouvernementale. Cette charte ne fait donc plus de distinction thématique (choix d'une couleur par thème) et se veut plus sobre mettant en avant le contenu de la carte.
+Le principe général est de suivre au plus pret les règles définies dans la [charte gouvernementale](https://www.gouvernement.fr/charte/charte-graphique-les-fondamentaux/introduction). 
+Cette charte ne fait donc plus de distinction thématique (choix d'une couleur par thème) et se veut plus sobre mettant en avant le contenu de la carte.
 
 Un seul fichier de mise en page QGIS (.qpt) permet de réaliser l'ensemble des formats A3, A4, A5, paysage, portrait, etc. La mise en forme s'adapte en fonction des critères que le cartographe renseignera.
 
@@ -25,12 +28,12 @@ Le bloc-marque au format svg est stocké sur un serveur web internet.
 ### Le format de la page
 
 Le format de la page se paramètre via les "propriétés de la page" accessible par un clic droit sur la page.
-Là, l'opérateur peut choisir la taille de sortie de la page (A4, A3, A5,...) et son orientation.
-La mise en page s'adaptera automatiquement aux choix qui sont faits.
+
+Là, l'opérateur peut choisir la taille de sortie de la page (A4, A3, A5,...) et son orientation. La mise en page s'adaptera automatiquement aux choix qui sont faits.
 
 ### La hauteur de la mariane
 
-Les documents produit selon la charte gouvernementale suivent des règles de composition basé sur la hauteur de la Marianne du bloc-marque. Par défaut et pour l'utilisation au format A3, A4 et A5, cette hauteur est fixée à `2,5 mm`. Dans le cadre d'une production particulière cette hauteur peut être modifiée en changeant la valeur de variable de mise en page `@hauteur_marianne`
+Les documents produits selon la charte gouvernementale suivent des règles de composition basées sur la hauteur de la Marianne du bloc-marque. Par défaut et pour l'utilisation au format A3, A4 et A5, cette hauteur est fixée à `2,5 mm`. Dans le cadre d'une production particulière cette hauteur peut être modifiée en changeant la valeur de la variable de mise en page `@hauteur_marianne`
 
 ![hauteur Marianne](img/image1.jpg)
 
@@ -38,13 +41,13 @@ La mise en page se mettra à jour automatiquement en fonction de la valeur de ce
 
 ### Le choix de l'emprise
 
-L'emprise de la carte avec notament les paramètres `Échelle`, `Min X`, `Max X`, `Min Y` et `Max Y` peuvent être définis automatiquement via la variable de mise en page `@emprise_carte`
+L'emprise de la carte, avec notament les paramètres `Échelle`, `Min X`, `Max X`, `Min Y` et `Max Y`, peut être définie automatiquement via la variable de mise en page `@emprise_carte`
 
 ![emprise de la carte](img/image2.jpg)
 
-Cette variable stock une chaine de caractère correspondant dont l'évaluation donne la géometrie de l'objet fixant l'emprise. 
+Cette variable stocke une chaine de caractère dont l'évaluation donne la géometrie de l'objet définissant l'emprise. Ainsi, si l'objectif est de produire une carte sur le département du Calvados et que le projet contient la couche `DEPARTEMENT` possédant l'attribut `insee_dep`, l'opérateur pourra renseigner dans cette variable la valeur `geometry(get_feature('DEPARTEMENT','insee_dep','14')`. 
 
-Exemple, si l'objectif est de produire une carte sur le département du Calvados et que le projet contient la couche `DEPARTEMENT` possédant l'attribut `insee_dep`, l'opérateur pourra renseigner dans cette variable la valeur `geometry(get_feature('DEPARTEMENT','insee_dep','14')`. L'échelle et l'emprise seront alors modifiées automatiquement pour obtenir le résultat souhaité.
+L'échelle et l'emprise seront alors modifiées automatiquement pour obtenir le résultat souhaité.
 
 ### Autres éléments paramétrables
 
