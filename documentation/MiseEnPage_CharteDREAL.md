@@ -23,7 +23,7 @@ Un seul fichier de mise en page QGIS (.qpt) permet de réaliser l'ensemble des f
 
 Le bloc-marque au format svg est stocké sur un serveur web internet.
 
-Une fonction personnalisée QGIS qui renvoie la hauteur ou la largeur d'un élément de la mise en page a été développé :
+Une fonction personnalisée QGIS qui renvoie la hauteur ou la largeur d'un élément de la mise en page a été développée pour les besoins de la mise en page :
 
 ```python
 from qgis.core import *
@@ -62,7 +62,7 @@ Le format de la page se paramètre via les "propriétés de la page" accessible 
 
 Là, l'opérateur peut choisir la taille de sortie de la page (A4, A3, A5,...) et son orientation. La mise en page s'adaptera automatiquement aux choix qui sont faits.
 
-### La hauteur de la mariane
+### La hauteur de la Marianne
 
 Les documents produits selon la charte gouvernementale suivent des règles de composition basées sur la hauteur de la Marianne du bloc-marque. Par défaut et pour l'utilisation au format A3, A4 et A5, cette hauteur est fixée à `2,5 mm`. Dans le cadre d'une production particulière cette hauteur peut être modifiée en changeant la valeur de la variable de mise en page `@hauteur_marianne`
 
