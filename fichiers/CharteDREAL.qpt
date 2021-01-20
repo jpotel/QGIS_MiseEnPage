@@ -1,0 +1,509 @@
+<Layout printResolution="300" units="mm" worldFileMap="{9bc598e3-f9ee-4158-8abd-1754405d3bba}" name="Paysage">
+ <Snapper snapToItems="1" snapToGrid="0" tolerance="5" snapToGuides="1"/>
+ <Grid resolution="10" offsetUnits="mm" offsetY="0" offsetX="0" resUnits="mm"/>
+ <PageCollection>
+  <symbol alpha="1" type="fill" clip_to_extent="1" name="" force_rhr="0">
+   <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+    <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+    <prop k="color" v="255,255,255,255"/>
+    <prop k="joinstyle" v="miter"/>
+    <prop k="offset" v="0,0"/>
+    <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+    <prop k="offset_unit" v="MM"/>
+    <prop k="outline_color" v="35,35,35,255"/>
+    <prop k="outline_style" v="no"/>
+    <prop k="outline_width" v="0.26"/>
+    <prop k="outline_width_unit" v="MM"/>
+    <prop k="style" v="solid"/>
+    <data_defined_properties>
+     <Option type="Map">
+      <Option value="" type="QString" name="name"/>
+      <Option name="properties"/>
+      <Option value="collection" type="QString" name="type"/>
+     </Option>
+    </data_defined_properties>
+   </layer>
+  </symbol>
+  <LayoutItem background="true" blendMode="0" zValue="0" id="" excludeFromExports="0" visibility="1" uuid="{4e4910ff-02aa-42f1-8413-ef166472973b}" groupUuid="" positionLock="false" size="297,210,mm" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="0,0,mm" templateUuid="{4e4910ff-02aa-42f1-8413-ef166472973b}" position="0,0,mm" frame="false" referencePoint="0" itemRotation="0" opacity="1" type="65638">
+   <FrameColor red="0" alpha="255" green="0" blue="0"/>
+   <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+   <LayoutObject>
+    <dataDefinedProperties>
+     <Option type="Map">
+      <Option value="" type="QString" name="name"/>
+      <Option name="properties"/>
+      <Option value="collection" type="QString" name="type"/>
+     </Option>
+    </dataDefinedProperties>
+    <customproperties/>
+   </LayoutObject>
+   <symbol alpha="1" type="fill" clip_to_extent="1" name="" force_rhr="0">
+    <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+     <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+     <prop k="color" v="255,255,255,255"/>
+     <prop k="joinstyle" v="miter"/>
+     <prop k="offset" v="0,0"/>
+     <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+     <prop k="offset_unit" v="MM"/>
+     <prop k="outline_color" v="35,35,35,255"/>
+     <prop k="outline_style" v="no"/>
+     <prop k="outline_width" v="0.26"/>
+     <prop k="outline_width_unit" v="MM"/>
+     <prop k="style" v="solid"/>
+     <data_defined_properties>
+      <Option type="Map">
+       <Option value="" type="QString" name="name"/>
+       <Option name="properties"/>
+       <Option value="collection" type="QString" name="type"/>
+      </Option>
+     </data_defined_properties>
+    </layer>
+   </symbol>
+  </LayoutItem>
+  <GuideCollection visible="1"/>
+ </PageCollection>
+ <LayoutItem background="false" blendMode="0" valign="32" zValue="41" marginX="0" id="production_texte" excludeFromExports="0" visibility="1" uuid="{47d7c0ec-41bc-45f8-8ed5-792dfd0dd3e5}" groupUuid="" positionLock="false" size="47.5,10.2465,mm" labelText="DREAL Normandie&#xa;le [% format_date(now() ,'dd/MM/yyyy')%]&#xa;réf : [% @project_basename%]" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="10,200,mm" templateUuid="{47d7c0ec-41bc-45f8-8ed5-792dfd0dd3e5}" htmlState="0" position="10,200,mm" frame="false" halign="8" referencePoint="6" itemRotation="0" marginY="0" opacity="1" type="65641">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pageheight-4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@largeur_cartouche-@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <LabelFont description="Arial,8,-1,5,50,0,0,0,0,0,Normal" style="Normal"/>
+  <FontColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem background="false" blendMode="0" valign="32" zValue="29" marginX="0" id="source_texte" excludeFromExports="0" visibility="1" uuid="{8c66f17c-fe27-4c23-951c-c239f61226cd}" groupUuid="" positionLock="false" size="47.5,6.85997,mm" labelText="A modifier au cas par cas&#xa;- IGN - Scan25&#xa;- DREAL Normandie" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="10,186.554,mm" templateUuid="{8c66f17c-fe27-4c23-951c-c239f61226cd}" htmlState="0" position="10,186.554,mm" frame="false" halign="8" referencePoint="6" itemRotation="0" marginY="0" opacity="1" type="65641">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pageheight-4*@hauteur_mariane-dimension_objet_mise_en_page(@layout_name , 'production_texte','hauteur')-dimension_objet_mise_en_page(@layout_name , 'production_titre','hauteur')" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@largeur_cartouche-@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <LabelFont description="Arial,8,-1,5,50,0,0,0,0,0,Normal" style="Normal"/>
+  <FontColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem background="false" blendMode="0" valign="32" zValue="28" marginX="0" id="production_titre" excludeFromExports="0" visibility="1" uuid="{c6a70df9-2e11-49fc-88b4-5611a09b97ff}" groupUuid="" positionLock="true" size="47.5,3.2,mm" labelText="Production :" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="10,189.754,mm" templateUuid="{c6a70df9-2e11-49fc-88b4-5611a09b97ff}" htmlState="0" position="10,189.754,mm" frame="false" halign="8" referencePoint="6" itemRotation="0" marginY="0" opacity="1" type="65641">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pageheight-4*@hauteur_mariane-dimension_objet_mise_en_page(@layout_name , 'production_texte','hauteur')" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@largeur_cartouche-@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <LabelFont description="Arial,8,-1,5,75,0,0,0,0,0,Gras" style="Bold"/>
+  <FontColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem background="false" blendMode="0" valign="32" zValue="18" marginX="0" id="source_titre" excludeFromExports="0" visibility="1" uuid="{737016b5-a2d8-4fb6-b9bd-92132bb0806a}" groupUuid="" positionLock="false" size="47.5,3.2,mm" labelText="Sources :" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="10,179.694,mm" templateUuid="{737016b5-a2d8-4fb6-b9bd-92132bb0806a}" htmlState="0" position="10,179.694,mm" frame="false" halign="8" referencePoint="6" itemRotation="0" marginY="0" opacity="1" type="65641">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pageheight-4*@hauteur_mariane-dimension_objet_mise_en_page(@layout_name , 'production_texte','hauteur')-dimension_objet_mise_en_page(@layout_name , 'production_titre','hauteur')-dimension_objet_mise_en_page(@layout_name , 'source_texte','hauteur')" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@largeur_cartouche-@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <LabelFont description="Arial,8,-1,5,75,0,0,0,0,0,Gras" style="Bold"/>
+  <FontColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem background="false" blendMode="0" valign="32" zValue="10" marginX="0" id="" excludeFromExports="0" visibility="1" uuid="{9445326f-db14-483e-8b27-7e43dd5a76e0}" groupUuid="" positionLock="false" size="45,120.241,mm" labelText="Ce qu'il faut faire :&#xa;&#xa;1) fixer le format de la page de sortie (A3, A4, A5, paysage, portrait)&#xa;&#xa;2) fixer l'emprise de la carte en modifiant la formule enregistrée dans la variable &quot;emprise_carte&quot;. Le but étant d'obtenir l'objet permettant de régler l'emprise ou mettre les valeurs si plus simple.&#xa;&#xa;3) compléter les sources en fonction de ce qui est représenté sur la carte &#xa;&#xa;4) Mettre à jour la légende&#xa;&#xa;5) si besoin possibilité de réduire la largeur du cartouche, et les marge à l'intérieur du cartouche et la grandeur de la mariane. (nb : la hauteur de la mariane influence la dimension des marges)&#xa;&#xa;&#xa;" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="10,42.5368,mm" templateUuid="{9445326f-db14-483e-8b27-7e43dd5a76e0}" htmlState="0" position="10,42.5368,mm" frame="false" halign="8" referencePoint="0" itemRotation="0" marginY="0" opacity="1" type="65641">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option name="properties"/>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <LabelFont description="Arial,10,-1,5,50,0,0,0,0,0" style=""/>
+  <FontColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem style="Line Ticks Up" type="65646" excludeFromExports="0" uuid="{b779983d-f7e1-4f59-b310-15b38453ce4c}" templateUuid="{b779983d-f7e1-4f59-b310-15b38453ce4c}" lineCapStyle="square" maxBarWidth="25" minBarWidth="10" labelHorizontalPlacement="0" labelBarSpace="0" numSegmentsLeft="0" visibility="1" size="47.5,5.2,mm" frame="false" height="2" mapUuid="{9bc598e3-f9ee-4158-8abd-1754405d3bba}" alignment="0" boxContentSpace="0" numSegments="2" position="10,173.994,mm" numUnitsPerSegment="10" outlineWidthM="0.3,mm" frameJoinStyle="miter" referencePoint="6" groupUuid="" opacity="1" zValue="7" segmentSizeMode="1" itemRotation="0" labelVerticalPlacement="0" numMapUnitsPerScaleBarUnit="1" positionLock="false" unitType="km" unitLabel="km" blendMode="0" lineJoinStyle="miter" outlineWidth="0.3" id="echelle" segmentMillimeters="8.03102" positionOnPage="10,173.994,mm" background="false">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedHeight">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="5.2" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pageheight-4*@hauteur_mariane-dimension_objet_mise_en_page(@layout_name , 'production_texte','hauteur')-dimension_objet_mise_en_page(@layout_name , 'production_titre','hauteur')-dimension_objet_mise_en_page(@layout_name , 'source_texte','hauteur')-&#xd;&#xa;dimension_objet_mise_en_page(@layout_name , 'source_titre','hauteur')-&#xd;&#xa;@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@largeur_cartouche-@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <text-style blendMode="0" namedStyle="Normal" fontFamily="Arial" fontSizeUnit="Point" multilineHeight="1" previewBkgrdColor="255,255,255,255" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontStrikeout="0" textColor="0,0,0,255" fontUnderline="0" fontSize="8" fontWordSpacing="0" fontItalic="0" textOpacity="1" textOrientation="horizontal" fontLetterSpacing="0" fontKerning="1" fontCapitals="0" fontWeight="50">
+   <text-buffer bufferBlendMode="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSizeUnits="MM" bufferJoinStyle="128" bufferColor="255,255,255,255" bufferNoFill="1" bufferOpacity="1" bufferSize="1" bufferDraw="0"/>
+   <background shapeBorderWidthUnit="MM" shapeOpacity="1" shapeDraw="0" shapeOffsetY="0" shapeBorderWidth="0" shapeRadiiUnit="MM" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeJoinStyle="64" shapeBorderColor="128,128,128,255" shapeSizeType="0" shapeBlendMode="0" shapeType="0" shapeSizeY="0" shapeSizeUnit="MM" shapeRotationType="0" shapeRotation="0" shapeSizeX="0" shapeRadiiY="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeOffsetUnit="MM" shapeOffsetX="0" shapeSVGFile="">
+    <symbol alpha="1" type="marker" clip_to_extent="1" name="markerSymbol" force_rhr="0">
+     <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
+      <prop k="angle" v="0"/>
+      <prop k="color" v="179,247,241,255"/>
+      <prop k="horizontal_anchor_point" v="1"/>
+      <prop k="joinstyle" v="bevel"/>
+      <prop k="name" v="circle"/>
+      <prop k="offset" v="0,0"/>
+      <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+      <prop k="offset_unit" v="MM"/>
+      <prop k="outline_color" v="35,35,35,255"/>
+      <prop k="outline_style" v="solid"/>
+      <prop k="outline_width" v="0"/>
+      <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+      <prop k="outline_width_unit" v="MM"/>
+      <prop k="scale_method" v="diameter"/>
+      <prop k="size" v="2"/>
+      <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+      <prop k="size_unit" v="MM"/>
+      <prop k="vertical_anchor_point" v="1"/>
+      <data_defined_properties>
+       <Option type="Map">
+        <Option value="" type="QString" name="name"/>
+        <Option name="properties"/>
+        <Option value="collection" type="QString" name="type"/>
+       </Option>
+      </data_defined_properties>
+     </layer>
+    </symbol>
+   </background>
+   <shadow shadowOffsetAngle="135" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowScale="100" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowRadius="1.5" shadowRadiusUnit="MM" shadowOffsetDist="1" shadowOffsetGlobal="1" shadowBlendMode="6" shadowOpacity="0.7" shadowDraw="0" shadowRadiusAlphaOnly="0" shadowOffsetUnit="MM" shadowColor="0,0,0,255"/>
+   <dd_properties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option name="properties"/>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dd_properties>
+  </text-style>
+  <fillColor red="0" alpha="255" green="0" blue="0"/>
+  <fillColor2 red="255" alpha="255" green="255" blue="255"/>
+  <strokeColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem symbolHeight="4" rasterBorderColor="0,0,0,255" type="65642" excludeFromExports="0" uuid="{73f32193-b268-43ab-94bb-802bd7ec5669}" templateUuid="{73f32193-b268-43ab-94bb-802bd7ec5669}" equalColumnWidth="0" symbolAlignment="1" resizeToContents="1" visibility="1" size="47.5,11.5,mm" frame="false" rasterBorderWidth="0" columnSpace="2" rasterBorder="1" wrapChar="" position="10,26.875,mm" outlineWidthM="0.3,mm" frameJoinStyle="miter" referencePoint="0" title="Légende" groupUuid="" opacity="1" zValue="4" titleAlignment="1" itemRotation="0" legendFilterByAtlas="0" splitLayer="0" positionLock="false" fontColor="#000000" blendMode="0" symbolWidth="7" id="legende" columnCount="1" lineSpacing="1" wmsLegendWidth="50" wmsLegendHeight="25" positionOnPage="10,26.875,mm" map_uuid="{9bc598e3-f9ee-4158-8abd-1754405d3bba}" boxSpace="0" background="true">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@hauteur_mariane*(4+1+1/2+3*3/4+2*1/3+1/2+11/6)" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@largeur_cartouche-@marge_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <styles>
+   <style alignment="1" name="title" marginBottom="3.5">
+    <styleFont description="Arial,10,-1,5,50,0,0,0,0,0,Normal" style="Normal"/>
+   </style>
+   <style marginTop="3" alignment="1" name="group">
+    <styleFont description="Arial,10,-1,5,50,0,0,0,0,0,Normal" style="Normal"/>
+   </style>
+   <style marginTop="3" alignment="1" name="subgroup">
+    <styleFont description="Arial,10,-1,5,50,0,0,0,0,0,Normal" style="Normal"/>
+   </style>
+   <style marginTop="2.5" alignment="1" name="symbol">
+    <styleFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" style=""/>
+   </style>
+   <style marginTop="2" alignment="1" marginLeft="2" name="symbolLabel">
+    <styleFont description="Arial,10,-1,5,50,0,0,0,0,0,Normal" style="Normal"/>
+   </style>
+  </styles>
+  <layer-tree-group>
+   <customproperties/>
+   <layer-tree-layer legend_exp="" providerKey="ogr" source="../teletravail/donnees/ADMIN-EXPRESS_2-2__SHP__FRA_2020-02-24/ADMIN-EXPRESS/1_DONNEES_LIVRAISON_2020-02-24/ADE_2-2_SHP_LAMB93_FR/REGION.shp|layerid=0|subset=&quot;INSEE_REG&quot; = '28'" checked="Qt::Checked" id="REGION_f8955a59_ee58_4695_a82c_3782d572e756" expanded="1" name="REGION">
+    <customproperties>
+     <property value="" key="legend/expressionFilter"/>
+     <property value="true" key="legend/expressionFilterEnabled"/>
+     <property value="0" key="showFeatureCount"/>
+    </customproperties>
+   </layer-tree-layer>
+   <custom-order enabled="0"/>
+  </layer-tree-group>
+ </LayoutItem>
+ <LayoutItem background="false" blendMode="0" valign="128" zValue="3" marginX="0" id="titre" excludeFromExports="0" visibility="1" uuid="{c7d3d02b-84e9-44a0-b9bd-d2d229ee25f3}" groupUuid="" positionLock="false" size="227,16.875,mm" labelText="Titre de la carte" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="60,5,mm" templateUuid="{c7d3d02b-84e9-44a0-b9bd-d2d229ee25f3}" htmlState="0" position="60,5,mm" frame="false" halign="1" referencePoint="0" itemRotation="0" marginY="0" opacity="1" type="65641">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedHeight">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@hauteur_mariane*(1+1/2+3*3/4+2*1/3+1/2+11/6)" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4* @hauteur_mariane+@largeur_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="2*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pagewidth-8*@hauteur_mariane-@largeur_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <LabelFont description="Arial,20,-1,5,75,0,0,0,0,0,Gras" style="Bold"/>
+  <FontColor red="0" alpha="255" green="0" blue="0"/>
+ </LayoutItem>
+ <LayoutItem background="true" blendMode="0" keepLayerSet="false" mapRotation="0" mapFlags="0" zValue="2" drawCanvasItems="true" id="carte_principale" excludeFromExports="0" visibility="1" uuid="{9bc598e3-f9ee-4158-8abd-1754405d3bba}" groupUuid="" followPresetName="" labelMargin="0,mm" positionLock="false" size="227,173.125,mm" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="60,26.875,mm" templateUuid="{9bc598e3-f9ee-4158-8abd-1754405d3bba}" position="60,26.875,mm" frame="false" followPreset="false" referencePoint="0" itemRotation="0" opacity="1" type="65639">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedHeight">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pageheight-@hauteur_mariane*(8+1+1/2+3*3/4+2*1/3+1/2+11/6)" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedMapScale">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="with_variable(&#xd;&#xa;&#x9;'geometrie_objet',&#xd;&#xa;&#x9;eval(@emprise_carte),&#xd;&#xa;&#x9;max(&#xd;&#xa;&#x9;&#x9;(xmax(@geometrie_objet)-xmin(@geometrie_objet))*1000/(@layout_pagewidth-8*@hauteur_mariane-@largeur_cartouche-2*@hauteur_mariane),&#xd;&#xa;&#x9;&#x9;(ymax(@geometrie_objet)-ymin(@geometrie_objet))*1000/(@layout_pageheight-@hauteur_mariane*(8+1+1/2+3*3/4+2*1/3+1/2+11/6)-2*@hauteur_mariane)&#xd;&#xa;&#x9;)&#xd;&#xa;)" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedMapXMax">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="xmax(eval(@emprise_carte))" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedMapXMin">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="xmin(eval(@emprise_carte))" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedMapYMax">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="ymax(eval(@emprise_carte))" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedMapYMin">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="ymin(eval(@emprise_carte))" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4* @hauteur_mariane+@largeur_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@hauteur_mariane*(4+1+1/2+3*3/4+2*1/3+1/2+11/6)" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@layout_pagewidth-8*@hauteur_mariane-@largeur_cartouche" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+  <Extent ymin="6785869.58650721982121468" xmax="619158.58772771758958697" ymax="7001321.11349277943372726" xmin="336660.41227228241041303"/>
+  <LayerSet/>
+  <AtlasMap margin="0.10000000000000001" atlasDriven="0" scalingMode="2"/>
+  <labelBlockingItems/>
+ </LayoutItem>
+ <LayoutItem background="false" blendMode="0" zValue="1" pictureWidth="18.75" northMode="0" id="bloc_marque" excludeFromExports="0" visibility="1" uuid="{0a874546-8a82-4c5b-ab28-dd1b7008fa3a}" groupUuid="" northOffset="0" positionLock="true" size="18.75,16.875,mm" pictureHeight="16.8224" resizeMode="0" svgBorderColor="0,0,0,255" mapUuid="" outlineWidthM="0.3,mm" frameJoinStyle="miter" positionOnPage="10,5,mm" anchorPoint="0" templateUuid="{0a874546-8a82-4c5b-ab28-dd1b7008fa3a}" position="10,5,mm" frame="false" referencePoint="0" file="http://carmen.developpement-durable.gouv.fr/IHM/metadata/BN/Publication/norm.svg" pictureRotation="0" itemRotation="0" opacity="1" svgFillColor="255,255,255,255" type="65640" svgBorderWidth="0.2">
+  <FrameColor red="0" alpha="255" green="0" blue="0"/>
+  <BackgroundColor red="255" alpha="255" green="255" blue="255"/>
+  <LayoutObject>
+   <dataDefinedProperties>
+    <Option type="Map">
+     <Option value="" type="QString" name="name"/>
+     <Option type="Map" name="properties">
+      <Option type="Map" name="dataDefinedHeight">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="@hauteur_mariane*(1+1/2+3*3/4+2*1/3+1/2+11/6)" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionX">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="4* @hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedPositionY">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="2*@hauteur_mariane" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+      <Option type="Map" name="dataDefinedWidth">
+       <Option value="true" type="bool" name="active"/>
+       <Option value="30*@hauteur_mariane/4" type="QString" name="expression"/>
+       <Option value="3" type="int" name="type"/>
+      </Option>
+     </Option>
+     <Option value="collection" type="QString" name="type"/>
+    </Option>
+   </dataDefinedProperties>
+   <customproperties/>
+  </LayoutObject>
+ </LayoutItem>
+ <customproperties>
+  <property value="png" key="atlasRasterFormat"/>
+  <property value="0" key="forceVector"/>
+  <property value="0" key="pdfAppendGeoreference"/>
+  <property value="0" key="pdfCreateGeoPdf"/>
+  <property value="0" key="pdfDisableRasterTiles"/>
+  <property value="1" key="pdfExportGeoPdfFeatures"/>
+  <property value="" key="pdfExportThemes"/>
+  <property value="0" key="pdfIncludeMetadata"/>
+  <property value="0" key="pdfOgcBestPracticeFormat"/>
+  <property value="0" key="pdfSimplify"/>
+  <property value="0" key="pdfTextFormat"/>
+  <property key="variableNames">
+   <value>emprise_carte</value>
+   <value>hauteur_mariane</value>
+   <value>largeur_cartouche</value>
+   <value>marge_cartouche</value>
+  </property>
+  <property key="variableValues">
+   <value>geometry(get_feature('REGION','insee_reg','28'))</value>
+   <value>2.5</value>
+   <value>50</value>
+   <value>2.5</value>
+  </property>
+ </customproperties>
+ <Atlas hideCoverage="0" sortFeatures="0" filterFeatures="0" enabled="0" filenamePattern="'output_'||@atlas_featurenumber" pageNameExpression="" coverageLayer=""/>
+</Layout>
