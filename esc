@@ -1,0 +1,47 @@
+[33mcommit c6f071365100da63b5ec2daa488604ccaf1cb10b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Sun Jan 24 10:33:06 2021 +0100
+
+    modification organisation des dossiers
+
+[33mcommit 58fb163fc66f4f6a2617c6e105bce7aec9ed44c6[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Sun Jan 24 10:28:29 2021 +0100
+
+    modification organisation dossier du répertoire
+
+[33mcommit 506589f36af1cc5999bedeed5dcba58066b10adc[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Wed Jan 20 14:10:12 2021 +0100
+
+    correction orthographe
+
+[33mcommit ed55418b94e730837dd5a4dd824189a8bb4c497d[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Wed Jan 20 14:05:59 2021 +0100
+
+    ajout de la fonction personnalisée QGIS retournant les dimensions d'un objet de la mise en page
+
+[33mcommit f2b91bb662fe842f394a33acd937991ae22e46f0[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Wed Jan 20 10:49:27 2021 +0100
+
+    Correction de la documentation
+
+[33mcommit 29333b4a55c2dd4c3a0900d1bac3e20530009ee6[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Wed Jan 20 10:34:05 2021 +0100
+
+    Finalisation première version de la documentation et mise à jour readme
+
+[33mcommit 413e7d557fc7c445f05080f865972bfdb87cc923[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Wed Jan 20 09:31:53 2021 +0100
+
+    Modification de l'extension des images2 et images3 de JPG vers jpg
+
+[33mcommit f1d743df1d25d905343707c459367d417ce24b8b[m
+Author: jpotel <jerome.potel@developpement-durable.gouv.fr>
+Date:   Wed Jan 20 09:20:33 2021 +0100
+
+    Ajout initial des fichiers dans le répertoire
